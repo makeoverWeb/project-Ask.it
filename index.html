@@ -26,13 +26,10 @@
   <div class="page-header">
     <div class="overlay"></div>
     <div class="page-header__top-line">
-        <a class="logotype" href="#">
-          <picture>
-            <source media="(min-width: 1200px)" srcset="img/logo-golden.png" width="150" height="60">
+        <nav class="main-nav main-nav--closed tablet-size ">
+          <a class="logotype" href="#">
             <img class="logotype__image" src="img/logo-golden.png" width="70px" height="30px" alt="Ask.it">
-          </picture>
-        </a>
-        <nav class="main-nav main-nav--closed">
+          </a>
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">123</span>
           </button>
@@ -59,10 +56,10 @@
             </ul>
             <ul class="social-list">
               <li class="social-list__item">
-                <a class="social-list__link" href="#">Lod in</a>
+                <a class="social-list__link social-list__link--log" href="#">Lod in</a>
               </li>
-              <li class="social-list__item">
-                <a class="social-list__link social-list__link--active" href="#">Register</a>
+              <li class="social-list__item social-list__item--user">
+                <a class="social-list__link social-list__link--active social-list__link--user" href="#">Register</a>
               </li>
             </ul>
           </div>
@@ -73,14 +70,15 @@
         <h1 class="page-header__title">Live Interaction From Audience</h1>
         <p class="page-header__text">Q&A, Polls and Slide-sharing for Events</p>
         <div class="button-wrap">
-          <div class="button-wrap__one">
-            <button class="button button__header button__header--one">Create a event</button>
-          </div>
-          <div class="button-wrap__two">
-            <button class="button button__header button__header--two">Join event</button>
-            <input type="placeholder" class="button button__header button__header--tree" name="type code" value="type code">
-          </div>
+          <button class="button button__create">Create an event</button>
+          <label class="button__join">
+            <span class="button__event">Join event</span>
+            <input type="text" class="type-code" name="name" placeholder="type code">
+          </label>
         </div>
+      </div>
+      <div class="page-header__iphone">
+        <img src="img/header-mobile.png" alt="mobile" width="300">
       </div>
     </div>
   </div>
