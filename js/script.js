@@ -12,3 +12,10 @@ navToggle.addEventListener('click', function() {
     navMain.classList.remove('main-nav--opened');
   }
 });
+
+// animated
+
+$(document).ready(function() {
+  $(".main-nav__list").addClass('animated fadeInUp');
+  $(".page-header__iphone").addClass('animated flip');
+});
