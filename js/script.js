@@ -19,3 +19,17 @@ $(document).ready(function() {
   $(".main-nav__list").addClass('animated fadeInUp');
   $(".page-header__iphone").addClass('animated flip');
 });
+
+
+// carousel
+
+  $('.owl-carousel').owlCarousel({
+    loop:true,
+    dots: true,
+    nav: true,
+    responsive:{
+      0:{
+        items:1
+      }
+    }
+  });
