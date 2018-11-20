@@ -465,20 +465,6 @@ a {
 section {
   padding: 50px 0 0; }
 
-.owl-prev {
-  background-image: url("../img/arrow-right.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100px;
-  height: 100px; }
-
-.owl-next {
-  background-image: url("../img/arrow-left.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100px;
-  height: 100px; }
-
 .page-header {
   position: relative;
   -webkit-box-sizing: border-box;
@@ -919,7 +905,8 @@ section {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   max-width: 420px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding-bottom: 50px; }
 
 .features__wrap {
   width: 100%;
@@ -969,6 +956,9 @@ section {
 @media (min-width: 768px) {
   .features {
     max-width: none; }
+  .features__content {
+    width: 80%;
+    margin: 0 auto; }
   .features__item:nth-child(1)::before, .features__item:nth-child(3)::before, .features__item:nth-child(5)::before {
     content: '';
     display: block;
@@ -1010,7 +1000,8 @@ section {
   max-width: 420px;
   margin: 0 auto;
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+  padding-bottom: 50px; }
 
 .partners__overlay {
   position: absolute;
@@ -1018,15 +1009,17 @@ section {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: #3c3c3c;
-  opacity: .8; }
+  background-color: rgba(29, 28, 28, 0.8);
+  opacity: .8;
+  z-index: -1; }
 
 .partners__title {
-  color: #fff; }
+  color: #fff;
+  opacity: .7; }
 
 .partners__wrap {
   width: 100%;
-  margin: 0 auto; }
+  margin: 50px auto 0; }
 
 .partners__content {
   width: 60%;
@@ -1055,9 +1048,51 @@ section {
   margin: 0 auto;
   text-align: center; }
 
+.customNextBtn {
+  width: 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  z-index: 100; }
+
+.customPrevBtn {
+  width: 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  z-index: 100; }
+
 @media (min-width: 768px) {
   .partners {
-    max-width: none; } }
+    max-width: none; }
+  .partners__wrap {
+    position: relative;
+    margin-top: 80px; }
+  .customNextBtn {
+    width: 20px;
+    top: 20%;
+    left: 30px; }
+  .customPrevBtn {
+    width: 20px;
+    top: 20%;
+    right: 30px; } }
+
+@media (min-width: 1200px) {
+  .partners__wrap {
+    width: 100%;
+    margin-top: 100px; }
+  .partners__content {
+    width: 100%; }
+  .partners__item {
+    width: 10%; }
+  .customNextBtn {
+    top: 0;
+    left: -60px; }
+  .customPrevBtn {
+    top: 0;
+    right: -60px; } }
 
 @media (min-width: 768px) {
   .tablet-size {

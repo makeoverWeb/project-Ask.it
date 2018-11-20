@@ -23,13 +23,26 @@ $(document).ready(function() {
 
 // carousel
 
-  $('.owl-carousel').owlCarousel({
+  var owl = $('.slider-1').owlCarousel({
     loop:true,
-    dots: true,
-    nav: true,
+    margin: 50,
+    autoplay: true,
+    nav: false,
     responsive:{
       0:{
         items:1
       }
     }
   });
+  var owl = $('.slider-1');
+    owl.owlCarousel();
+    // Go to the next item
+    $('.customNextBtn').click(function() {
+        owl.trigger('next.owl.carousel');
+    })
+    // Go to the previous item
+    $('.customPrevBtn').click(function() {
+    // With optional speed parameter
+    // Parameters has to be in square bracket '[]'
+    owl.trigger('prev.owl.carousel', [300]);
+})
