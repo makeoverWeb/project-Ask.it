@@ -439,7 +439,30 @@ h1 {
   font-size: 46px;
   text-align: center; }
 
-h2, h3 {
+h2 {
+  color: #037693;
+  font-family: "LatoLight", sans-serif;
+  font-size: 40px;
+  text-align: center;
+  position: relative;
+  letter-spacing: 5px;
+  font-weight: normal; }
+  h2::before {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    margin-left: -45px;
+    content: '';
+    display: block;
+    width: 90px;
+    height: 4px;
+    background-image: url(../img/border-big-blue.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px; }
+
+h3 {
   color: #037693;
   font-family: "LatoLight", sans-serif;
   font-size: 40px;
@@ -710,7 +733,29 @@ section {
   margin: 0 auto; }
 
 .how-it__title {
-  margin-bottom: 60px; }
+  width: 360px;
+  margin: 0 auto 60px; }
+  .how-it__title::before {
+    -webkit-animation-name: how-it--mobile;
+            animation-name: how-it--mobile;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate; }
+
+@-webkit-keyframes how-it--mobile {
+  from {
+    margin-left: -150px; }
+  to {
+    margin-left: -135px; } }
+
+@keyframes how-it--mobile {
+  from {
+    margin-left: -150px; }
+  to {
+    margin-left: -135px; } }
 
 .how-it__one-wrap {
   width: 100%;
@@ -723,9 +768,9 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
@@ -735,11 +780,36 @@ section {
 
 .how-it__item {
   width: 50%; }
+  .how-it__item:nth-child(1) .how-it__img:active, .how-it__item:nth-child(1) .how-it__img:focus {
+    background-image: url(../img/icon1-active.png); }
+  .how-it__item:nth-child(2) .how-it__img {
+    background-image: url(../img/icon2.png); }
+    .how-it__item:nth-child(2) .how-it__img:active, .how-it__item:nth-child(2) .how-it__img:focus {
+      background-image: url(../img/icon2-active.png); }
+  .how-it__item:nth-child(3) .how-it__img {
+    background-image: url(../img/icon3.png); }
+    .how-it__item:nth-child(3) .how-it__img:active, .how-it__item:nth-child(3) .how-it__img:focus {
+      background-image: url(../img/icon3-active.png); }
+  .how-it__item:nth-child(4) .how-it__img {
+    background-image: url(../img/icon4.png); }
+    .how-it__item:nth-child(4) .how-it__img:active, .how-it__item:nth-child(4) .how-it__img:focus {
+      background-image: url(../img/icon4-active.png); }
 
 .how-it__img {
   display: block;
-  text-align: center;
+  width: 90px;
+  height: 90px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  background-image: url(../img/icon1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   margin: 0 auto; }
+  .how-it__img:active, .how-it__img:focus {
+    -webkit-transition: ease 1s;
+    transition: ease 1s; }
 
 .how-it__descr {
   color: #037693;
@@ -908,6 +978,31 @@ section {
   margin: 0 auto;
   padding-bottom: 50px; }
 
+.features__title {
+  width: 300px;
+  margin: 0 auto 60px; }
+  .features__title::before {
+    -webkit-animation-name: features--mobile;
+            animation-name: features--mobile;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate; }
+
+@-webkit-keyframes features--mobile {
+  from {
+    margin-left: -100px; }
+  to {
+    margin-left: -80px; } }
+
+@keyframes features--mobile {
+  from {
+    margin-left: -100px; }
+  to {
+    margin-left: -80px; } }
+
 .features__wrap {
   width: 100%;
   margin: 0 auto; }
@@ -1016,6 +1111,8 @@ section {
 .partners__title {
   color: #fff;
   opacity: .7; }
+  .partners__title::before {
+    background-image: url(../img/border-big-white.png); }
 
 .partners__wrap {
   width: 100%;
@@ -1410,34 +1507,42 @@ section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-    .social-list__item.social-list__link--log::before {
-      display: block;
-      content: '';
-      width: 20px;
-      height: 25px;
-      background-image: url(../img/login-icon.png);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 100%;
-      position: absolute;
-      top: -15px;
-      left: 0; }
-    .social-list__item.social-list__link--user::before {
-      display: block;
-      content: '';
-      width: 20px;
-      height: 25px;
-      background-image: url(../img/user-icon.png);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 100%;
-      position: absolute;
-      top: -15px;
-      left: 50%;
-      margin-left: -10px; }
+  .social-list__link--log-icon {
+    width: 20px;
+    height: 22px;
+    display: block;
+    background-image: url(../img/login.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: transparent;
+    outline: none;
+    border: none; }
+    .social-list__link--log-icon:hover, .social-list__link--log-icon:active, .social-list__link--log-icon:focus {
+      background-image: url(../img/login-active.png); }
+  .social-list__link--user-icon {
+    width: 20px;
+    height: 22px;
+    display: block;
+    background-image: url(../img/user.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: transparent;
+    outline: none;
+    border: none; }
+    .social-list__link--user-icon:hover, .social-list__link--user-icon:active, .social-list__link--user-icon:focus {
+      background-image: url(../img/user-active.png); }
   .social-list__link {
     font-family: "LatoLight", sans-serif;
     text-transform: none;
